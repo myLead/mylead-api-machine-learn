@@ -60,6 +60,7 @@ class Lead(db.Model):
     id_Dono = relationship("Dono",             back_populates = "id_dono_lead")
 
 class Atuacao(db.Model):
+    __tablename__        = 'Atuacao'
     id_lead_atuacao      = db.Column(db.Integer, ForeignKey('Lead.id_lead'),           primary_key = True)
     id_atividade_atuacao = db.Column(db.Integer, ForeignKey('Atividades.id_atividade'), primary_key = True)
 
@@ -67,6 +68,7 @@ class Atuacao(db.Model):
     id_Atividade = relationship("Atividades", back_populates = "id_atividade_atuacao")
 
 class Participacao(db.Model):
+    __tablename__          = 'Participacao'
     id_lead_participacao   = db.Column(db.Integer, primary_key = True)
     id_evento_participacao = db.Column(db.Integer, primary_key = True)
 
