@@ -4,4 +4,4 @@ from mylead import db
 from dbhelper import *
 
 class BaseLeadsDAO():
-            
+    pass
